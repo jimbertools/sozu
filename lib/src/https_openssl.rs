@@ -1841,11 +1841,11 @@ fn setup_curves(ctx: &mut SslContextBuilder) -> Result<(), ErrorStack> {
   ctx.set_tmp_ecdh(&curve)
 }
 
-#[cfg(all(not(ossl101), not(ossl102), not(ossl110)))]
-fn setup_curves(_: &mut SslContextBuilder) -> Result<(), ErrorStack> {
-  compile_error!("unsupported openssl version, please open an issue");
-  Ok(())
-}
+// #[cfg(all(not(ossl101), not(ossl102), not(ossl110)))]
+// fn setup_curves(_: &mut SslContextBuilder) -> Result<(), ErrorStack> {
+//   compile_error!("unsupported openssl version, please open an issue");
+//   Ok(())
+// }
 
 fn setup_dh(ctx: &mut SslContextBuilder) -> Result<(), ErrorStack> {
   let dh = Dh::params_from_pem(
