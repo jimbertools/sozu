@@ -1,7 +1,7 @@
 [package]
 name = "sozu"
 description = "sozu, a fast, reliable, hot reconfigurable HTTP reverse proxy"
-repository = "https://github.com/sozu-proxy/sozu"
+repository = "https://https://github.com/jimbertools/sozu"
 readme = "README.md"
 documentation = "https://docs.rs/sozu"
 homepage = "http://sozu.io"
